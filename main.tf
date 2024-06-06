@@ -1,17 +1,3 @@
-provider "aws" {
-  region  = var.aws_region
-  profile= var.profile
-  default_tags {
-   tags = {
-     Environment = var.environment
-     Owner       = var.owner
-     Project     = var.project
-     Department  = var.department
-   }
-  }
-}
-
-
 module "vpc" {
   source  = "./modules/vpc"
 }
